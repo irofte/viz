@@ -15,7 +15,7 @@
       'viz.shared',
       'viz.agent.account',
       'viz.agent.authorization',
-      'viz.agent.dashboard'
+      'viz.agent'
     ])
     .config(configSetup)
     .run(runSetup);
