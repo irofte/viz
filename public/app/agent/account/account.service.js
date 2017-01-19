@@ -1,6 +1,6 @@
 (function() {
 
-  angular.module('viz.account')
+  angular.module('viz.agent.account')
 
     .factory('accountService', AccountService);
 

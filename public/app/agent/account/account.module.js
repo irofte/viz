@@ -1,12 +1,12 @@
 (function() {
 
-  angular.module('viz.account', [])
+  angular.module('viz.agent.account', [])
 
     .config(function($stateProvider) {
       $stateProvider
         .state('authenticate', {
           url: '/',
-          templateUrl: 'partials/account/partials/authenticate',
+          templateUrl: 'partials/agent/account/partials/authenticate',
           controller: 'AccountController',
           controllerAs: 'account'
         })

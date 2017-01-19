@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('viz.account')
+    .module('viz.agent.account')
 
     .controller('AccountController', AccountController);
 

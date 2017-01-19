@@ -2,15 +2,15 @@
   'use strict';
 
   angular
-    .module('viz.admin.dashboard', [])
+    .module('viz.agent.dashboard', [])
     .config(configSetup);
 
   function configSetup($stateProvider) {
     $stateProvider
-      .state('admin.dashboard', {
+      .state('agent.dashboard', {
         url:'/dashboard',
-        controller: 'AdminDashboardController',
-        controllerAs: 'adminDashboard',
+        controller: 'AgentDashboardController',
+        controllerAs: 'agentDashboard',
         templateUrl: 'partials/admin/dashboard/partials/admin-dashboard.jade'
       });
   }

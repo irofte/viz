@@ -4,17 +4,15 @@
   var socket = io.connect('http://localhost:3030');
 
   socket.on('news', function (data) {
-    console.log('aaa', data);
+    // console.log('aaa', data);
     socket.emit('my other event', { my: 'this is from client' });
   });
 
   angular
     .module('viz', [
       'ui.router',
-      'viz.account',
-      'viz.shared',
-      'viz.employee',
-      'viz.admin'
+      'viz.agent.account',
+      'viz.shared'
     ])
     .config(configSetup)
     .run(runSetup);
