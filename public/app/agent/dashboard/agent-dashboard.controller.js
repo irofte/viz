@@ -1,13 +1,24 @@
 (function () {
+
   'use strict';
+
   angular
     .module('viz.agent.dashboard')
     .controller('AgentDashboardController', AgentDashboardController);
 
-  function AgentDashboardController() {
+  AgentDashboardController.$inject = [
+    'socket',
+    'localStorageService'
+  ];
+
+  function AgentDashboardController(socket, localStorageService) {
     var agentDashboard = this;
 
-    agentDashboard.test = 'This is agent dashboard';
+    agentDashboard.account = localStorageService.get('account')[0].group;
+
+    // socket.emit('join', {
+    //
+    // })
   }
 
 })();

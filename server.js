@@ -9,16 +9,7 @@ require('./server/config/express')(app, config);
 require('./server/api/routes/routes')(app, config);
 require('./server/config/routes')(app, config);
 require('./server/config/mongooseConnect')();
-
-io.on('connection', function(socket) {
-  console.log('client connected');
-
-  socket.emit('news', { hello: 'world' });
-
-  socket.on('my other event', function (data) {
-    console.log(data);
-  });
-});
+require('./server/socket/socket')(io);
 
 server.listen(config.port);
 

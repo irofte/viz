@@ -1,18 +1,11 @@
 (function () {
   'use strict';
 
-  var socket = io.connect('http://localhost:3030');
-
-  socket.on('news', function (data) {
-    // console.log('aaa', data);
-    socket.emit('my other event', { my: 'this is from client' });
-  });
-
   angular
     .module('viz', [
       'ui.router',
       'LocalStorageModule',
-      'viz.shared',
+      'viz.agent.shared',
       'viz.agent.account',
       'viz.agent.authorization',
       'viz.agent'
