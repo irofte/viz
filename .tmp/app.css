@@ -1,9 +1,23 @@
+.a {
+  width: 10px;
+}
+.form-header {
+  margin: 30px 0;
+}
 body {
   height: 100%;
   padding: 0;
   -webkit-border-radius: 2px;
           border-radius: 2px;
 }
-.a {
-  width: 10px;
+.brand-header {
+  background-color: #000;
+}
+.app-logo {
+  margin-left: 30px;
+}
+.app-logo a {
+  font-size: 30px;
+  color: #fff;
+  text-decoration: none;
 }

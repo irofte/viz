@@ -17,6 +17,7 @@ html
   script(src='bower_components/jquery/dist/jquery.js')
   script(src='bower_components/bootstrap/dist/js/bootstrap.js')
   script(src='bower_components/angular-ui-router/release/angular-ui-router.js')
+  script(src='bower_components/angular-local-storage/dist/angular-local-storage.js')
   // endbower
 
   script(src="socket.io/socket.io.js")
@@ -30,10 +31,9 @@ html
   script(src="public/app/shared/shared.controller.js")
   script(src="public/app/agent/account/account.controller.js")
   script(src="public/app/agent/dashboard/agent-dashboard.controller.js")
+  script(src="public/app/agent/authorization/authorizationModule.js")
+  script(src="public/app/agent/authorization/authorizationService.js")
   //- endinject
 
 body(ng-app="viz")
-  .container
-    .row
-      .col-md-12
-        div(ui-view)
+  .container-full(ui-view)

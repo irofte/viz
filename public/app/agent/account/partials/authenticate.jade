@@ -1,16 +1,41 @@
+.row.brand-header
+  .col-md-12.app-logo
+    a(ui-sref="authenticate") Viz
 .row
-  .col-md-1
-  .col-md-10
-      a(ui-sref="authenticate")
-        Pentapark
-  .col-md-1
-.row
-  .col-md-12
-    h2 Agent Login
-    .container
-      .row
-        .col-md-4
-        .col-md-4
-          input.input-lg(type="text", name="username", ng-model="account.user.username", required)
-          input.input-lg(type="password", name="password", ng-model="account.user.password", required)
-          button(ng-click="account.submit()") Log in
+  .col-md-4
+  .col-md-4
+    .row.form-header
+      .col-md-12
+        h3 Agent login
+    .row
+      .col-md-12
+        form.form-horizontal
+          fieldset
+            div.form-group
+              label.col-md-4.control-label(for="username") Group
+              div.col-md-4
+                input.form-control.input-md(name="username"
+                                            type="text"
+                                            ng-model="account.user.username"
+                                            required)
+            div.form-group
+              label.col-md-4.control-label(for="username") Username
+              div.col-md-4
+                input.form-control.input-md(name="username"
+                                            type="text"
+                                            ng-model="account.user.username"
+                                            required)
+
+            div.form-group
+              label.col-md-4.control-label(for="password") Password
+              div.col-md-4
+                input.form-control.input-md(name="password"
+                                            type="password"
+                                            ng-model="account.user.password"
+                                            required)
+
+            div.col-md-12.text-center
+              button.btn.btn-primary(id="singlebutton" 
+                                     name="singlebutton"
+                                     ng-click="account.submit()") Continue
+  .col-md-4

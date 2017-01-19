@@ -1,4 +1,5 @@
 (function () {
+
   'use strict';
 
   angular
@@ -7,12 +8,24 @@
 
   function configSetup($stateProvider) {
     $stateProvider
+      .state('agent', {
+        abstract: true,
+        url: '/agent',
+        templateUrl: 'partials/agent/dashboard/partials/agent',
+        resolve: {
+          auth: auth
+        }
+      })
       .state('agent.dashboard', {
         url:'/dashboard',
         controller: 'AgentDashboardController',
         controllerAs: 'agentDashboard',
-        templateUrl: 'partials/admin/dashboard/partials/admin-dashboard.jade'
+        templateUrl: 'partials/agent/dashboard/partials/agent-dashboard'
       });
+
+    function auth(AuthorizationService) {
+      return AuthorizationService.authorizeAuthenticatedAccount();
+    }
   }
 
 })();
