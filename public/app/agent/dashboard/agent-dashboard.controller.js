@@ -14,7 +14,10 @@
   function AgentDashboardController(socket, localStorageService) {
     var agentDashboard = this;
 
-    agentDashboard.account = localStorageService.get('account')[0].group;
+    var account = localStorageService.get('account')[0];
+
+    agentDashboard.group = account.group;
+    agentDashboard.username = account.username;
 
     // socket.emit('join', {
     //

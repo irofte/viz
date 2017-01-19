@@ -4,6 +4,16 @@
 .form-header {
   margin: 30px 0;
 }
+.mt-20 {
+  margin-top: 20px;
+}
+.ml-20 {
+  margin-left: 20px;
+}
+.username {
+  font-size: 20px;
+  display: inline;
+}
 body {
   height: 100%;
   padding: 0;
