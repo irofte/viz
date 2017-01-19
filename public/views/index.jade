@@ -1,0 +1,47 @@
+doctype
+html
+  head
+  title Pentapark
+  base(href="/")
+
+  // bower:css
+  link(rel='stylesheet', href='bower_components/bootstrap/dist/css/bootstrap.css')
+  // endbower
+
+  //- inject:css
+  link(rel="stylesheet", href=".tmp/app.css")
+  //- endinject
+  
+  // bower:js
+  script(src='bower_components/angular/angular.js')
+  script(src='bower_components/jquery/dist/jquery.js')
+  script(src='bower_components/bootstrap/dist/js/bootstrap.js')
+  script(src='bower_components/angular-ui-router/release/angular-ui-router.js')
+  // endbower
+
+  script(src="socket.io/socket.io.js")
+
+  //- inject:js
+  script(src="public/app/app.js")
+  script(src="public/app/account/account.module.js")
+  script(src="public/app/admin/admin.module.js")
+  script(src="public/app/employee/employee.module.js")
+  script(src="public/app/shared/shared.module.js")
+  script(src="public/app/admin/dashboard/admin-dashboard.module.js")
+  script(src="public/app/admin/users/admin-users.module.js")
+  script(src="public/app/account/account.service.js")
+  script(src="public/app/admin/admin.service.js")
+  script(src="public/app/employee/employee.service.js")
+  script(src="public/app/account/account.controller.js")
+  script(src="public/app/admin/admin.controller.js")
+  script(src="public/app/employee/employee.controller.js")
+  script(src="public/app/shared/shared.controller.js")
+  script(src="public/app/admin/dashboard/admin-dashboard.controller.js")
+  script(src="public/app/admin/users/admin-users.controller.js")
+  //- endinject
+
+body(ng-app="pentapark")
+  .container
+    .row
+      .col-md-12
+        div(ui-view)

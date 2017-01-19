@@ -1,0 +1,16 @@
+.row
+  .col-md-1
+  .col-md-10
+      a(ui-sref="authenticate")
+        Pentapark
+  .col-md-1
+.row
+  .col-md-12
+    h2 Login
+    .container
+      .row
+        .col-md-4
+        .col-md-4
+          input.input-lg(type="text", name="username", ng-model="account.user.username", required)
+          input.input-lg(type="password", name="password", ng-model="account.user.password", required)
+          button(ng-click="account.submit()") Log in

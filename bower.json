@@ -1,0 +1,27 @@
+{
+  "name": "Pentapark",
+  "description": "Pentalog parking app.",
+  "authors": [
+    "Bogdan Savin"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "training",
+    "pentalog",
+    "parking"
+  ],
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "less/bootstrap.less",
+        "dist/css/bootstrap.css",
+        "dist/js/bootstrap.js"
+      ]
+    }
+  },
+  "dependencies": {
+    "angular": "1.5.7",
+    "bootstrap": "3.x.x",
+    "angular-ui-router": "^0.3.1"
+  }
+}

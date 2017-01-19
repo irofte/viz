@@ -1,0 +1,38 @@
+{
+  "name": "angular",
+  "version": "1.0.0",
+  "description": "Pentalog parking app.",
+  "keywords": [
+    "training",
+    "pentalog",
+    "parking"
+  ],
+  "authors": [
+    "Bogdan Savin"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-if": "^2.0.0",
+    "gulp-inject": "^4.0.0",
+    "gulp-less": "^3.0.5",
+    "gulp-load-plugins": "^1.2.2",
+    "gulp-nodemon": "^2.0.6",
+    "gulp-plumber": "^1.1.0",
+    "gulp-print": "^2.0.1",
+    "gulp-util": "^3.0.7",
+    "wiredep": "^4.0.0",
+    "yargs": "^5.0.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "jade": "^1.11.0",
+    "mongoose": "^4.6.1",
+    "path": "^0.12.7",
+    "q": "^1.4.1",
+    "socket.io": "^1.7.2"
+  }
+}

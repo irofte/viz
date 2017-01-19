@@ -1,0 +1,47 @@
+pentapark
+ - App users
+   - admin
+   - view role
+
+Admin
+ - Parking zones Add / Delete / Update
+ - Parking spots Add / Delete / Update
+    - Zone (Basement / ...)
+    - Identificator (A1)c
+
+ - Employee - Add / Delete
+   - Last name
+   - First name
+   - Starting date in pentalog
+   - Cars plates [ ]
+   - Vacation days
+   - Phone number
+   - Index
+   - Assigned place
+
+
+
+   User
+  - Employee - Update
+    - Last name
+    - First name
+    - Cars plates [ ]
+    - Vacation days
+    - Phone number
+
+
+ - Contact form
+   - index
+   - subject
+   - textarea
+
+
+ - Parking spots viewer
+   - Calendar
+   - Day cell - Bogdan Savin - XX-XX-XXX - A1
+
+
+ - News
+
+
+ -
