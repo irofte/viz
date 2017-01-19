@@ -9,12 +9,12 @@
   });
 
   angular
-    .module('pentapark', [
+    .module('viz', [
       'ui.router',
-      'pentapark.account',
-      'pentapark.shared',
-      'pentapark.employee',
-      'pentapark.admin'
+      'viz.account',
+      'viz.shared',
+      'viz.employee',
+      'viz.admin'
     ])
     .config(configSetup)
     .run(runSetup);

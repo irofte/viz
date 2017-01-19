@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('pentapark.employee')
+    .module('viz.employee')
     .controller('EmployeeController', EmployeeController);
 
   function EmployeeController($http) {

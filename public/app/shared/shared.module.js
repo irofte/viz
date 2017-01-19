@@ -1,6 +1,6 @@
 (function () {
   angular
-    .module('pentapark.shared', [])
+    .module('viz.shared', [])
     .config(configSetup);
 
   function configSetup($stateProvider) {

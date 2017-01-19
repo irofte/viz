@@ -1,7 +1,7 @@
 (function () {
   'use strict';
   angular
-    .module('pentapark.admin.dashboard')
+    .module('viz.admin.dashboard')
     .controller('AdminDashboardController', AdminDashboardController);
 
   function AdminDashboardController() {

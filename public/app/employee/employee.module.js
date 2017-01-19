@@ -1,6 +1,6 @@
 (function () {
   angular
-    .module('pentapark.employee', [])
+    .module('viz.employee', [])
     .config(configSetup);
 
   function configSetup($stateProvider) {

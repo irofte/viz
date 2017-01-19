@@ -1,6 +1,6 @@
 (function() {
 
-  angular.module('pentapark.account', [])
+  angular.module('viz.account', [])
 
     .config(function($stateProvider) {
       $stateProvider

@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('pentapark.shared')
+    .module('viz.shared')
     .controller('SharedController', SharedController);
 
   function SharedController() {

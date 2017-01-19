@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('pentapark.admin.dashboard', [])
+    .module('viz.admin.dashboard', [])
     .config(configSetup);
 
   function configSetup($stateProvider) {

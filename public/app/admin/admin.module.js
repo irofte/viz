@@ -2,9 +2,9 @@
   'use strict';
 
   angular
-    .module('pentapark.admin', [
-      'pentapark.admin.dashboard',
-      'pentapark.admin.users'
+    .module('viz.admin', [
+      'viz.admin.dashboard',
+      'viz.admin.users'
     ])
     .config(configSetup);
 

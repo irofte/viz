@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('pentapark.account')
+    .module('viz.account')
 
     .controller('AccountController', AccountController);
 
