@@ -19,9 +19,11 @@
     agentDashboard.group = account.group;
     agentDashboard.username = account.username;
 
-    // socket.emit('join', {
-    //
-    // })
+    socket.emit('createGroup', {
+      groupName: agentDashboard.group
+    })
+
+    io('/' + agentDashboard.group);
   }
 
 })();
