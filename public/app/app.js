@@ -1,10 +1,12 @@
 (function () {
+
   'use strict';
 
   angular
     .module('viz', [
       'ui.router',
       'LocalStorageModule',
+      'angularRandomString',
       'viz.agent.shared',
       'viz.agent.account',
       'viz.agent.authorization',

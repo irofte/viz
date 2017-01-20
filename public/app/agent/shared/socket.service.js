@@ -18,7 +18,7 @@
         var account = localStorageService.get('account');
 
         if (account) {
-          socket.emit('accountReconnected', account[0].group);
+          socket.emit('accountReconnected', account);
         }
       });
 

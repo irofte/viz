@@ -6,7 +6,7 @@ module.exports = function(socket) {
 
     socket
       .to('bogdan')
-      .emit('show-message', data);
+      .emit('show-message', 'cacamaca');
   })
 
   socket.on('disconnect', function () {

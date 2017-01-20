@@ -15,7 +15,9 @@
   function AgentBogdanController(socket, localStorageService, $state) {
     var agentBogdan = this;
 
-    agentBogdan.group = localStorageService.get('account')[0].group;
+    var agent = localStorageService.get('account');
+
+    agentBogdan.group = agent.group;
     agentBogdan.sendMessage = sendMessage;
 
     function sendMessage() {

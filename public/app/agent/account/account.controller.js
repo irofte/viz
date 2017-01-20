@@ -8,10 +8,13 @@
     AccountController.$inject = [
       '$http',
       'localStorageService',
-      '$state'
+      '$state',
+      'randomString'
     ];
 
-    function AccountController($http, localStorageService, $state) {
+    function AccountController($http, localStorageService, $state
+      , randomString) {
+
       var account = this;
 
       account.submit = submit;
@@ -25,7 +28,13 @@
           .catch(resolveError);
 
         function resolveSubmit(response) {
-          localStorageService.set('account', response.data);
+          var str = randomString(5);
+
+          var account = response.data[0];
+
+          account.clientHash = str;
+
+          localStorageService.set('account', account);
 
           $state.go('agent.dashboard');
         }
