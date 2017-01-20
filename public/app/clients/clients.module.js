@@ -1,23 +1,23 @@
-(function () {
+(function() {
 
   'use strict';
 
   angular
-    .module('viz.agent', [
-      'viz.agent.dashboard',
-      'viz.agent.session.bogdan'
+    .module('viz.clients', [
+      'viz.client.authentication',
+      'viz.client.bogdan'
     ])
     .config(configSetup);
 
   function configSetup($stateProvider) {
     $stateProvider
-      .state('agent', {
+      .state('client', {
         abstract: true,
-        url: '/agent',
-        templateUrl: 'partials/agent/partials/agent',
-        resolve: {
-          auth: auth
-        }
+        url: '/client',
+        templateUrl: 'partials/clients/partials/clients'
+        // resolve: {
+        //   auth: auth
+        // }
       });
 
     function auth(AuthorizationService) {

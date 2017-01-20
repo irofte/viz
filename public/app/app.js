@@ -8,7 +8,8 @@
       'viz.agent.shared',
       'viz.agent.account',
       'viz.agent.authorization',
-      'viz.agent'
+      'viz.agent',
+      'viz.clients'
     ])
     .config(configSetup)
     .run(runSetup);

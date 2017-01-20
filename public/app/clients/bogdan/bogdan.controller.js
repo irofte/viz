@@ -3,16 +3,16 @@
   'use strict';
 
   angular
-    .module('viz.agent.session')
-    .controller('AgentSessionController', AgentSessionController);
+    .module('viz.client.bogdan')
+    .controller('BogdanController', BogdanController);
 
-  AgentSessionController.$inject = [
+  BogdanController.$inject = [
     'socket',
     'localStorageService',
     '$state'
   ];
 
-  function AgentSessionController(socket, localStorageService, $state) {
+  function BogdanController(socket, localStorageService, $state) {
     var agentSession = this;
 
     agentSession.group = localStorageService.get('account')[0].group;

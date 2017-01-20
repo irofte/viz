@@ -1,0 +1,32 @@
+.row.brand-header
+  .col-md-12.client-authentication-logo Viz
+.row
+  .col-md-4
+  .col-md-4
+    .row.form-header
+      .col-md-12
+        h3 Client login
+    .row
+      .col-md-12
+        form.form-horizontal(novalidate)
+          fieldset
+            div.form-group
+              label.col-md-4.control-label(for="name") Name
+              div.col-md-4
+                input.form-control.input-md(name="name"
+                                            type="text"
+                                            ng-model="clientAuthentication.client.name"
+                                            required)
+
+            div.form-group
+              label.col-md-4.control-label(for="session") Session code
+              div.col-md-4
+                input.form-control.input-md(name="session"
+                                            type="text"
+                                            ng-model="clientAuthentication.client.session"
+                                            required)
+
+            div.col-md-12.text-center
+              button.btn.btn-primary(name="continue"
+                                     ng-click="clientAuthentication.submit()") Continue
+  .col-md-4
