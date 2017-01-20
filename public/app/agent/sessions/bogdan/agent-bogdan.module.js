@@ -3,7 +3,7 @@
   'use strict';
 
   angular
-    .module('viz.agent.session.bogdan', [])
+    .module('viz.agent.bogdan', [])
     .config(configSetup);
 
   function configSetup($stateProvider) {
@@ -12,7 +12,7 @@
         url:'/agent-bogdan',
         controller: 'AgentBogdanController',
         controllerAs: 'agentBogdan',
-        templateUrl: 'partials/agent/sessions/bogdan/partials/agent-session-bogdan.jade'
+        templateUrl: 'partials/agent/sessions/bogdan/partials/agent-bogdan.jade'
       });
   }
 

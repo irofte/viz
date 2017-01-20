@@ -5,7 +5,7 @@
   angular
     .module('viz.agent', [
       'viz.agent.dashboard',
-      'viz.agent.session.bogdan'
+      'viz.agent.bogdan'
     ])
     .config(configSetup);
 

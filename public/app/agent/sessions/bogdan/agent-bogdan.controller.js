@@ -3,7 +3,7 @@
   'use strict';
 
   angular
-    .module('viz.agent.session.bogdan')
+    .module('viz.agent.bogdan')
     .controller('AgentBogdanController', AgentBogdanController);
 
   AgentBogdanController.$inject = [
@@ -13,13 +13,13 @@
   ];
 
   function AgentBogdanController(socket, localStorageService, $state) {
-    var agentSession = this;
+    var agentBogdan = this;
 
-    agentSessionBogdan.group = localStorageService.get('account')[0].group;
-    agentSessionBogdan.sendMessage = sendMessage;
+    agentBogdan.group = localStorageService.get('account')[0].group;
+    agentBogdan.sendMessage = sendMessage;
 
     function sendMessage() {
-      socket.emit('message', agentSessionBogdan.group);
+      socket.emit('message', agentBogdan.group);
     }
 
     socket.on('show-message', function(data) {

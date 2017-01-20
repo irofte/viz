@@ -24,7 +24,7 @@
     function startSession() {
       socket.emit('createGroup', agentDashboard.group);
 
-      $state.go('agent.session');
+      $state.go('agent.bogdan');
     }
   }
 
