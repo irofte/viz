@@ -1,19 +1,15 @@
-var groups = require('../groups/groups.js');
-
 module.exports = function(io) {
   io.on('connection', connection);
 
   function connection(socket) {
-    // console.log('client connected');
+    console.log('general client connected');
+
+    require('../groups/bogdan/bogdan')(io, socket);
 
     socket.on('createGroup', function(data) {
-      var nsp = groups.createGroup(io, data.groupName);
+      console.log('group ' + 'mimi' + ' created', data);
 
-      nsp.on('connection', function(socket) {
-        console.log('someone connected');
-      });
+      socket.join('mimi');
     });
-
-
   }
 };

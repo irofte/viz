@@ -8,22 +8,24 @@
 
   AgentDashboardController.$inject = [
     'socket',
-    'localStorageService'
+    'localStorageService',
+    '$state'
   ];
 
-  function AgentDashboardController(socket, localStorageService) {
+  function AgentDashboardController(socket, localStorageService, $state) {
     var agentDashboard = this;
 
     var account = localStorageService.get('account')[0];
 
     agentDashboard.group = account.group;
     agentDashboard.username = account.username;
+    agentDashboard.startSession = startSession;
 
-    socket.emit('createGroup', {
-      groupName: agentDashboard.group
-    })
+    function startSession() {
+      socket.emit('createGroup', agentDashboard.group);
 
-    io('/' + agentDashboard.group);
+      $state.go('agent.session');
+    }
   }
 
 })();
