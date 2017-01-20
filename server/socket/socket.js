@@ -7,9 +7,9 @@ module.exports = function(io) {
     require('../groups/bogdan/bogdan')(io, socket);
 
     socket.on('createGroup', function(data) {
-      console.log('group ' + 'mimi' + ' created', data);
+      console.log('group ' + data + ' created', data);
 
-      socket.join('mimi');
+      socket.join(data);
     });
   }
 };
