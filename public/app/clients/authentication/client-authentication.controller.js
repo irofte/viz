@@ -42,8 +42,7 @@
         });
 
         socket.on('sessionCodeError', function(agent) {
-          notify
-            .message('The session code is invalid', 'error');
+          notify.message('The session code is invalid', 'error');
         });
       }
     }

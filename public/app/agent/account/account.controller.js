@@ -9,17 +9,22 @@
       '$http',
       'localStorageService',
       '$state',
-      'randomString'
+      'randomString',
+      'notify'
     ];
 
     function AccountController($http, localStorageService, $state
-      , randomString) {
+      , randomString, notify) {
 
       var account = this;
 
       account.submit = submit;
 
-      function submit() {
+      function submit(valid) {
+        if (!valid) {
+          return;
+        }
+
         var URL = 'http://localhost:3030/api/login';
 
         $http
@@ -40,7 +45,7 @@
         }
 
         function resolveError(error) {
-          console.log('ERROR', error);
+          notify.message(error.data, 'error');
         }
       }
     }

@@ -6,7 +6,7 @@ exports.logIn = function(req, res) {
   if (!req.body.username) {
     res
       .status(404)
-      .send(JSON.stringify('There is an error on request'));
+      .send('There is an error on request');
   }
 
   AccountModel
@@ -17,9 +17,9 @@ exports.logIn = function(req, res) {
     if (!response.length) {
       res
         .status(404)
-        .send(JSON.stringify('Login unsuccesfull!'));
+        .send('Login unsuccesfull!');
     }
 
-    res.send(JSON.stringify(response));
+    res.send(response);
   }
 };
