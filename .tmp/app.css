@@ -34,7 +34,7 @@
 .error,
 .info {
   position: fixed;
-  top: 20px;
+  top: 45px;
   left: 50%;
   font-size: 20px;
   font-weight: 300;
@@ -55,6 +55,11 @@
 .info {
   background-color: #58b957;
 }
+html,
+body {
+  width: 100%;
+  overflow: hidden;
+}
 body {
   height: 100%;
   padding: 0;
@@ -66,8 +71,6 @@ body {
 }
 .app-logo {
   margin-left: 30px;
-}
-.app-logo a {
   font-size: 30px;
   color: #fff;
   text-decoration: none;

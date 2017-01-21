@@ -1,46 +1,47 @@
-.row.brand-header
-  .col-md-12.app-logo
-    a(ui-sref="authenticate") Viz
-.row
-  .col-md-4
-  .col-md-4
-    .row.form-header
-      .col-md-12
-        h3 Agent login
-    .row
-      .col-md-12
-        form.form-horizontal(name="accountForm", ng-submit="account.submit(accountForm.$valid)", novalidate)
-          fieldset
-            div.form-group
-              label.col-md-4.control-label(for="group") Group
-              div.col-md-4
-                input.form-control.input-md(name="group"
-                                            type="text"
-                                            ng-model="account.user.group"
-                                            required)
-                div(ng-if="accountForm.$submitted || accountForm.group.$touched", 
-                    ng-messages="accountForm.group.$error")
-                  .form-validation(ng-message="required") You did not enter group
-            div.form-group
-              label.col-md-4.control-label(for="username") Username
-              div.col-md-4
-                input.form-control.input-md(name="username"
-                                            type="text"
-                                            ng-model="account.user.username"
-                                            required)
-                div(ng-if="accountForm.$submitted || accountForm.username.$touched", 
-                    ng-messages="accountForm.username.$error")
-                  .form-validation(ng-message="required") You did not enter username
-            div.form-group
-              label.col-md-4.control-label(for="password") Password
-              div.col-md-4
-                input.form-control.input-md(name="password"
-                                            type="password"
-                                            ng-model="account.user.password"
-                                            required)
-                div(ng-if="accountForm.$submitted || accountForm.password.$touched", 
-                    ng-messages="accountForm.password.$error")
-                  .form-validation(ng-message="required") You did not enter password
-            div.col-md-12.text-center
-              button.btn.btn-primary(name="continue") Continue
-  .col-md-4
+.container-fluid
+  .row.brand-header
+    .col-md-12
+      a.app-logo(ui-sref="agent.dashboard") Viz
+  .row
+    .col-md-3
+    .col-md-6
+      .row.form-header
+        .col-md-12
+          h3 Agent login
+      .row
+        .col-md-12
+          form.form-horizontal(name="accountForm", ng-submit="account.submit(accountForm.$valid)", novalidate)
+            fieldset
+              div.form-group
+                label.col-md-4.control-label(for="group") Group
+                div.col-md-4
+                  input.form-control.input-md(name="group"
+                                              type="text"
+                                              ng-model="account.user.group"
+                                              required)
+                  div(ng-if="accountForm.$submitted || accountForm.group.$touched", 
+                      ng-messages="accountForm.group.$error")
+                    .form-validation(ng-message="required") You did not enter group
+              div.form-group
+                label.col-md-4.control-label(for="username") Username
+                div.col-md-4
+                  input.form-control.input-md(name="username"
+                                              type="text"
+                                              ng-model="account.user.username"
+                                              required)
+                  div(ng-if="accountForm.$submitted || accountForm.username.$touched", 
+                      ng-messages="accountForm.username.$error")
+                    .form-validation(ng-message="required") You did not enter username
+              div.form-group
+                label.col-md-4.control-label(for="password") Password
+                div.col-md-4
+                  input.form-control.input-md(name="password"
+                                              type="password"
+                                              ng-model="account.user.password"
+                                              required)
+                  div(ng-if="accountForm.$submitted || accountForm.password.$touched", 
+                      ng-messages="accountForm.password.$error")
+                    .form-validation(ng-message="required") You did not enter password
+              div.col-md-12.text-center
+                button.btn.btn-primary(name="continue") Continue
+    .col-md-3

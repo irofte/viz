@@ -1,35 +1,37 @@
-.row.brand-header
-  .col-md-12.client-authentication-logo Viz
-.row
-  .col-md-4
-  .col-md-4
-    .row.form-header
-      .col-md-12
-        h3 Client login
-    .row
-      .col-md-12
-        form.form-horizontal(name="clientAuthenticationForm", ng-submit="clientAuthentication.submit(clientAuthenticationForm.$valid)", novalidate)
-          fieldset
-            div.form-group
-              label.col-md-4.control-label(for="name") Name
-              div.col-md-4
-                input.form-control.input-md(name="name"
-                                            type="text"
-                                            ng-model="clientAuthentication.client.name"
-                                            required)
-                div(ng-if="clientAuthenticationForm.$submitted || clientAuthenticationForm.name.$touched", 
-                    ng-messages="clientAuthenticationForm.name.$error")
-                  .form-validation(ng-message="required") You did not enter your name
-            div.form-group
-              label.col-md-4.control-label(for="session") Session code
-              div.col-md-4
-                input.form-control.input-md(name="session"
-                                            type="text"
-                                            ng-model="clientAuthentication.client.session"
-                                            required)
-                div(ng-if="clientAuthenticationForm.$submitted || clientAuthenticationForm.session.$touched", 
-                    ng-messages="clientAuthenticationForm.session.$error")
-                  .form-validation(ng-message="required") You did not enter a session code
-            div.col-md-12.text-center
-              button.btn.btn-primary(name="continue") Continue
-  .col-md-4
+.container-fluid
+  .row.brand-header
+    .col-md-12
+      .app-logo Viz
+  .row
+    .col-md-3
+    .col-md-6
+      .row.form-header
+        .col-md-12
+          h3 Client login
+      .row
+        .col-md-12
+          form.form-horizontal(name="clientAuthenticationForm", ng-submit="clientAuthentication.submit(clientAuthenticationForm.$valid)", novalidate)
+            fieldset
+              div.form-group
+                label.col-md-4.control-label(for="name") Name
+                div.col-md-4
+                  input.form-control.input-md(name="name"
+                                              type="text"
+                                              ng-model="clientAuthentication.client.name"
+                                              required)
+                  div(ng-if="clientAuthenticationForm.$submitted || clientAuthenticationForm.name.$touched", 
+                      ng-messages="clientAuthenticationForm.name.$error")
+                    .form-validation(ng-message="required") You did not enter your name
+              div.form-group
+                label.col-md-4.control-label(for="session") Session code
+                div.col-md-4
+                  input.form-control.input-md(name="session"
+                                              type="text"
+                                              ng-model="clientAuthentication.client.session"
+                                              required)
+                  div(ng-if="clientAuthenticationForm.$submitted || clientAuthenticationForm.session.$touched", 
+                      ng-messages="clientAuthenticationForm.session.$error")
+                    .form-validation(ng-message="required") You did not enter a session code
+              div.col-md-12.text-center
+                button.btn.btn-primary(name="continue") Continue
+    .col-md-3
