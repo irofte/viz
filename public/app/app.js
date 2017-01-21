@@ -7,6 +7,8 @@
       'ui.router',
       'LocalStorageModule',
       'angularRandomString',
+      'ngMessages',
+      'viz.shared',
       'viz.agent.shared',
       'viz.agent.account',
       'viz.agent.authorization',

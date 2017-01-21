@@ -1,12 +1,17 @@
-var handleSockets = require('./handleSockets');
+var handleSockets = require('./handleSockets'),
+    logger = require('./logger');
 
 module.exports = function(socket) {
   socket.on('accountReconnected', function(data) {
-    console.log('Account ' + data.group + ' reconnected');
-
     handleSockets.addAgent(data);
 
     socket.join(data.group);
-    console.log('Account ' + data.group + ' joined group ' + data.group);
+
+    if (data.username) {
+      logger.agent(data.username + ' reconnected in GROUP: ' + data.group);
+    } else {
+      logger.client(data.name + ' reconnected in GROUP: ' + data.group);
+    }
+
   });
 };

@@ -13,7 +13,7 @@ module.exports = function(io) {
     bogdan(socket);
 
     socket.on('createGroup', function(data) {
-      console.log('group ' + data.group + ' created', data.group);
+      logger.agent('group ' + data.group + ' created', data.group);
 
       handleSockets.addAgent(data);
 
@@ -22,7 +22,7 @@ module.exports = function(io) {
 
     socket.on('clientConnect', function(clientHash) {
       var agent = handleSockets.getAgent(clientHash);
-      console.log('YYY', agent);
+
       if (agent) {
         socket.emit(clientHash, agent);
 

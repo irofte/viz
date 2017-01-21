@@ -1,0 +1,24 @@
+.error, .info {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  font-size: 20px;
+  font-weight: 300;
+  transform: translate(-50%, 0);
+  z-index: 9999999;
+  color: @white;
+  padding: 20px 50px;
+  border-radius: 4px;
+  -webkit-transition: top 0.5s ease-out,opacity 0.2s ease-out;
+  -moz-transition: top 0.5s ease-out,opacity 0.2s ease-out;
+  -o-transition: top 0.5s ease-out,opacity 0.2s ease-out;
+  transition: top 0.5s ease-out,opacity 0.2s ease-out;
+}
+
+.error {
+  background-color: @danger;
+}
+
+.info {
+  background-color: @green;
+}
