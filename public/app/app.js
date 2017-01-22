@@ -9,6 +9,7 @@
       'angularRandomString',
       'ngMessages',
       'viz.shared',
+      'viz.idle',
       'viz.agent.shared',
       'viz.agent.account',
       'viz.agent.authorization',

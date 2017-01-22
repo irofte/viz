@@ -10,11 +10,11 @@ exports.logIn = function(req, res) {
   }
 
   AccountModel
-    .find(req.body)
+    .findOne(req.body)
     .then(accountResolve);
 
   function accountResolve(response) {
-    if (!response.length) {
+    if (!response) {
       res
         .status(404)
         .send('Login unsuccesfull!');

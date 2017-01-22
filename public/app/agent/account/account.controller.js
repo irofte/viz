@@ -9,13 +9,10 @@
       '$http',
       'localStorageService',
       '$state',
-      'randomString',
       'notify'
     ];
 
-    function AccountController($http, localStorageService, $state
-      , randomString, notify) {
-
+    function AccountController($http, localStorageService, $state, notify) {
       var account = this;
 
       account.submit = submit;
@@ -33,11 +30,9 @@
           .catch(resolveError);
 
         function resolveSubmit(response) {
-          var str = randomString(5);
+          var account = response.data;
 
-          var account = response.data[0];
-
-          account.clientHash = str;
+          account.type = 'agent';
 
           localStorageService.set('account', account);
 

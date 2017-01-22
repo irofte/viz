@@ -19,6 +19,7 @@
 
     agentBogdan.group = agent.group;
     agentBogdan.sendMessage = sendMessage;
+    agentBogdan.clientSessionCode = agent.clientHash;
 
     function sendMessage() {
       socket.emit('message', agentBogdan.group);

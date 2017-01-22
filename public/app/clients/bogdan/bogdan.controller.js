@@ -15,7 +15,7 @@
   function BogdanController(socket, localStorageService, $state) {
     var bogdan = this;
 
-    bogdan.name = localStorageService.get('account').name;
+    bogdan.username = localStorageService.get('account').username;
 
     socket.on('show-message', function(data) {
       console.log(data);

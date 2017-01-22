@@ -25,7 +25,7 @@
           return;
         }
 
-        socket.emit('clientConnect', clientAuthentication.client.session);
+        socket.emit(identify, clientAuthentication.client);
 
         openAgent();
       }
@@ -35,6 +35,7 @@
           var account = clientAuthentication.client;
 
           account.group = agent;
+          account.type = 'client';
 
           localStorageService.set('account', account);
 

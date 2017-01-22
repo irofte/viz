@@ -15,6 +15,8 @@
         abstract: true,
         url: '/agent',
         templateUrl: 'partials/agent/partials/agent',
+        controller: 'AgentController',
+        controllerAs: 'agent',
         resolve: {
           auth: auth
         }

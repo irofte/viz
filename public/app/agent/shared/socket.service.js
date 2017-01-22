@@ -15,10 +15,11 @@
       var socket = io.connect('http://localhost:3030');
 
       socket.on('connect', function(data) {
+        console.log('fire');
         var account = localStorageService.get('account');
 
         if (account) {
-          socket.emit('accountReconnected', account);
+          socket.emit('identify', account);
         }
       });
 

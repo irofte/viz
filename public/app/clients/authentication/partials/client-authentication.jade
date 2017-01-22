@@ -17,7 +17,7 @@
                 div.col-md-4
                   input.form-control.input-md(name="name"
                                               type="text"
-                                              ng-model="clientAuthentication.client.name"
+                                              ng-model="clientAuthentication.client.username"
                                               required)
                   div(ng-if="clientAuthenticationForm.$submitted || clientAuthenticationForm.name.$touched", 
                       ng-messages="clientAuthenticationForm.name.$error")

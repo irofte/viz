@@ -1,7 +1,10 @@
 .container-fluid
   .row.brand-header
-    .col-md-12
+    .col-md-6
       a.app-logo(ui-sref="agent.dashboard") Viz
+    .col-md-6
+      button.btn.btn-default(type="button"
+                             ng-click="agent.logout()") Logout
   .row
     .col-md-1
     .col-md-10(ui-view='')
