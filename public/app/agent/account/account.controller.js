@@ -6,13 +6,14 @@
     .controller('AccountController', AccountController);
 
     AccountController.$inject = [
+      '$socket',
       '$http',
       'localStorageService',
       '$state',
       'notify'
     ];
 
-    function AccountController($http, localStorageService, $state, notify) {
+    function AccountController($socket, $http, localStorageService, $state, notify) {
       var account = this;
 
       account.submit = submit;
@@ -35,6 +36,8 @@
           account.type = 'agent';
 
           localStorageService.set('account', account);
+
+          $socket.emit('identify', account);
 
           $state.go('agent.dashboard');
         }

@@ -25,14 +25,18 @@
           return;
         }
 
-        socket.emit(identify, clientAuthentication.client);
+        var account = clientAuthentication.client;
 
-        openAgent();
+        account.type = 'client';
+
+        socket.emit('identify', account);
+
+        // openAgent();
       }
 
       function openAgent(valid) {
         socket.on(clientAuthentication.client.session, function(agent) {
-          var account = clientAuthentication.client;
+
 
           account.group = agent;
           account.type = 'client';

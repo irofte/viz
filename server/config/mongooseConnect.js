@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 module.exports = function() {
   mongoose.Promise = require('q').Promise;
 
-  mongoose.connect('mongodb://localhost/viz');
+  mongoose.connect('mongodb://bogdan:bogdan@ds155737.mlab.com:55737/viz');
 
   var db = mongoose.connection;
 

@@ -7,12 +7,12 @@
     .controller('AgentBogdanController', AgentBogdanController);
 
   AgentBogdanController.$inject = [
-    'socket',
+    '$socket',
     'localStorageService',
     '$state'
   ];
 
-  function AgentBogdanController(socket, localStorageService, $state) {
+  function AgentBogdanController($socket, localStorageService, $state) {
     var agentBogdan = this;
 
     var agent = localStorageService.get('account');
@@ -22,10 +22,10 @@
     agentBogdan.clientSessionCode = agent.clientHash;
 
     function sendMessage() {
-      socket.emit('message', agentBogdan.group);
+      $socket.emit('message', agentBogdan.group);
     }
 
-    socket.on('show-message', function(data) {
+    $socket.on('show-message', function(data) {
       console.log(data);
     });
   }

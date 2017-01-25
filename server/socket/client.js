@@ -1,28 +1,50 @@
-var client = require('./identity');
+var agentController = require('./socket-db/agent/agent.controller'),
+    clientController = require('./socket-db/client/client.controller'),
+    logger = require('./logger'),
+    async = require('async');
 
-client.assignedAgent = function(input) {
-  var assigned = this.identities.filter(function(item) {
-    return item.clientHash === input.clientHash;
-  });
+// exports.resolve = function(data) {
+//   async.waterfall([
+//     async.apply(validateSessionCode, data),
+//     async.apply(isConnected, data),
+//     connectClient
+//   ]);
+// };
 
-  return assigned.length ? assigned[0].group : false;
+function validateSessionCode(data, input) {
+  agentController
+    .hasHash(data)
+    .then(function(response) {
+      if (response) {
+        logger.agent(data.username + ' from group: ' + data.group + ' reconnected');
+
+        callback(true);
+      }
+
+      callback(null, data);
+    });
 };
 
-// var connected2 = client.checkConnection(data);
-//
-// if (!connected2) {
-//   client.connect(data);
-//
-//   var agent2 = client.assignedAgent(data);
-//
-//   console.log('RTY', agent2);
+function isConnected(data, callback) {
+  console.log('SECOND');
+  clientController
+    .fetchClient(data)
+    .then(function(response) {
+      if (response) {
+        logger.agent(data.username + ' from group: ' + data.group + ' reconnected');
 
-exports.resolve = function() {
-  var connected = client.checkConnection(data);
+        callback(true);
+      }
 
-  if (!connected) {
-    client.connect(data);
-  } else {
-    logger.agent(data.username + ' from group: ' + data.group + ' reconnected');
-  }
-};
+      callback(null, data);
+    });
+}
+
+function connectClient(data, callback) {
+  console.log('THIRD');
+  clientController
+    .connectClient(data)
+    .then(function(response) {
+      logger[response.type](response.username + ' from group: ' + response.group + ' connected');
+    });
+}

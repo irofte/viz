@@ -7,13 +7,13 @@
     .controller('AgentDashboardController', AgentDashboardController);
 
   AgentDashboardController.$inject = [
-    'socket',
+    '$socket',
     'localStorageService',
     '$state',
     'randomString'
   ];
 
-  function AgentDashboardController(socket, localStorageService, $state
+  function AgentDashboardController($socket, localStorageService, $state
     , randomString) {
 
     var agentDashboard = this;
@@ -31,7 +31,7 @@
 
       localStorageService.set('account', account);
 
-      socket.emit('agentConnect', account);
+      $socket.emit('startSession', account);
 
       $state.go('agent.' + agentDashboard.group);
     }
