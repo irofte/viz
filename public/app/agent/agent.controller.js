@@ -21,8 +21,6 @@
       agent.logout = logout;
 
       function logout() {
-
-
         $socket.emit('agentLogout', account);
 
         localStorageService.remove('account');

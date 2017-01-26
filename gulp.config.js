@@ -16,8 +16,8 @@ module.exports = function() {
     less: ['./public/styles/app.less'],
     bower: {
       json: require('./bower.json'),
-      directory: './bower_components',
-      ignorePath: '../../'
+      directory: 'public/bower_components',
+      ignorePath: '../'
     },
     index: public + 'views/index.jade',
     public: public,
@@ -36,6 +36,14 @@ module.exports = function() {
 
   config.getWiredepDefaultOptions = function() {
     var options = {
+      fileTypes: {
+        jade: {
+          replace: {
+            js: 'script(src="public/{{filePath}}")',
+            css: 'link(rel="stylesheet", href="public/{{filePath}}")'
+          }
+        }
+      },
       bowerJson: config.bower.json,
       directory: config.bower.directory,
       ignorePath: config.bower.ignorePath

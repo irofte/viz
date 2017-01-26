@@ -37,8 +37,6 @@
 
           localStorageService.set('account', account);
 
-          $socket.emit('identify', account);
-
           $state.go('agent.dashboard');
         }
 

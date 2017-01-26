@@ -60,6 +60,7 @@
 
     this.$get = function $socketFactory($rootScope) {
       var socket = io(ioUrl, ioConfig);
+      console.log('XRT');
 
       return {
         on: function on(event, callback) {

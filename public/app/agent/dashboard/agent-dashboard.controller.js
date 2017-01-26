@@ -25,7 +25,8 @@
     agentDashboard.startSession = startSession;
 
     function startSession() {
-      var str = randomString(5);
+      var str = randomString(15);
+      console.log(str);
 
       account.clientHash = str;
 
